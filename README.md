@@ -48,4 +48,4 @@ Options:
 2. Add Course
 3. Enroll Student
 4. View Enrollments
-5. Exit
+5. exit
