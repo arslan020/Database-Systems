@@ -1,51 +1,56 @@
-# Student Course Management System
+# Airline Reservation System
 
-A simple terminal-based application to manage students, courses, and enrollments using SQLite and SQLAlchemy.
+A simple terminal-based application to manage flights, passengers, bookings, crew members, and crew assignments using SQLite.
 
 ## Features
 
-- Add students with unique emails  
-- Add courses with unique names  
-- Enroll students in courses  
-- View all enrollments  
+- Add flights with departure and arrival details  
+- Add passengers with passport and nationality info  
+- Create bookings linking passengers to flights  
+- Add crew members with specific roles  
+- Assign crew members to flights  
 
 ## Project Structure
-student-course-management/
-├── database/
+airline_system/
+├── db_manager.py           # SQLite database management and table creation
+├── models/
 │   ├── __init__.py
-│   ├── models.py    
-│   ├── sqlite_db.py     
-├── business/
-│   ├── __init__.py
-│   ├── logic.py  
-├── data_access/
-│   ├── __init__.py
-│   ├── crud.py     
-└── main.py
+│   ├── flight.py           # Flight entity logic
+│   ├── passenger.py        # Passenger entity logic
+│   ├── booking.py          # Booking entity logic
+│   ├── crew.py             # Crew member logic
+│   └── crew_assignment.py  # Crew assignment logic
+├── app.py                  # Main application file with CLI menu
+├── requirements.txt        # Project dependencies (none external)
+└── README.md               # This file
 
 ## Requirements
 
 - Python 3.7+
-- Install dependencies:
-  ```bash
-  pip install sqlalchemy
-  pip install sqlite3
-    ```
+- No external dependencies required (uses standard library sqlite3 and datetime)
 
 ## How to Run
+
 Clone the repository or download the code files.
 
 Open terminal in the project directory.
 
 Run the app:
-  ```bash
-python main.py
+```bash
+python app.py
 ```
+
 ## Usage
-On running, the app shows a menu:
-Options:
-1. Add Student
-2. Add Course
-3. Enroll Student
-4. View Enrollments
-5. exit
+On running, the app shows a menu with options:
+
+Add Flight
+
+Add Passenger
+
+Create Booking
+
+Add Crew Member
+
+Assign Crew to Flight
+
+Exit
